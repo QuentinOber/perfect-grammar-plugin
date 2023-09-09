@@ -1,0 +1,188 @@
+.exercise-template-default {
+  @include atBig {
+    background-color: rgb(240 241 245);
+    background-image: linear-gradient(rgb(210 213 219) 1px, transparent 1px),
+      linear-gradient(to right, rgb(210 213 219) 1px, rgb(240 241 245) 1px);
+    background-size: 20px 20px;
+  }
+}
+
+.single-exercise-container {
+  max-width: 1000px;
+  margin: auto;
+
+  .top-navbar {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    padding: 5px 8px;
+    justify-content: space-between;
+
+    @include atBig {
+      padding: 12px 0px;
+    }
+
+    .nav-button {
+      color: $mainBlue;
+      background: white;
+      border: solid 3px $mainBlue;
+      box-shadow: 5px 5px $mainBlue;
+      border-radius: 5px;
+      padding: 5px 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .go-back {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .exercise-content {
+    background-color: white;
+    max-width: 950px;
+    padding: 18px 12px 40px 12px;
+
+    @include atBig {
+      padding: 40px 50px 70px;
+      margin: 10px auto 80px;
+      border: 4px solid $mainBlue;
+      border-radius: 5px;
+      box-shadow: 7px 7px $mainBlue;
+      a {
+        text-decoration: none;
+      }
+      .save-done-button {
+        transform: scale(1.5);
+      }
+
+      .one-checkbox-wrapper label {
+        transform: scale(1.5);
+      }
+    }
+
+    .title-banner {
+      margin: 0 -12px 15px -12px;
+      padding: 5px;
+      text-align: center;
+      background-color: $mainBlue;
+      text-decoration: white;
+      h1 {
+        margin: 5px;
+      }
+
+      @include atBig {
+        text-align: center;
+        margin: 50px -50px 50px -50px;
+      }
+      h1 {
+        color: white;
+        margin: 10px;
+      }
+    }
+    .top-exercise {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      align-items: center;
+      .level-exercise {
+        background-color: $mainWhite;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 19px;
+        font-weight: 700;
+        color: $mediumBlue;
+        padding: 14px 30px;
+        border: 2px solid $mediumBlue;
+        box-shadow: 5px 5px $mediumBlue;
+
+        @include atBig {
+          font-size: 28px;
+        }
+      }
+      .save-done-button {
+        margin-right: 15px;
+        display: flex;
+        justify-content: flex-end;
+        .save-checkbox-wrapper {
+          margin-right: 15px;
+        }
+      }
+    }
+    .exercise-video {
+      padding: 20px 0px;
+      margin: 0px -15px;
+      @include atBig {
+        margin: 0px -20px;
+      }
+      &__wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .key-info {
+      padding: 10px 0px;
+      @include atBig {
+        padding: 10px 10px;
+      }
+    }
+
+    .exercise-test {
+      .h5p-sidebar {
+        margin: 0 -12px;
+      }
+    }
+    .footer-exercise {
+      display: grid;
+      place-items: center;
+      .footer-done-button {
+        scale: 1.5;
+      }
+    }
+    .actions-footer {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  }
+  .login-header {
+    background-color: $mediumBlue;
+    border-radius: 8px;
+    box-shadow: 4px 4px $mainBlue;
+    padding: 10px 20px;
+    gap: 15px;
+    margin-bottom: 30px;
+    @include atBig {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      color: $mainWhite;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 10px 10px 10px 10px;
+    }
+    button {
+      background-color: $mainWhite;
+      color: $mainBlue;
+      font-size: 18px;
+      font-weight: 700;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 2px 2px $mainRed;
+
+      @include atBig {
+        min-width: 200px;
+      }
+    }
+  }
+}

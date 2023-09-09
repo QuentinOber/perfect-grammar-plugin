@@ -1,0 +1,59 @@
+.progress-container {
+  color: #0d3b66;
+  font-weight: 800;
+  margin-bottom: 20px;
+  .progress-label {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    font-weight: 700;
+    p {
+      color: $mainBlue;
+      margin: 0;
+    }
+  }
+  .checklist-progress {
+    height: 20px;
+    width: calc(100% - 4px);
+    position: relative;
+    border: solid 2px $mainBlue;
+    box-shadow: 3px 3px $mediumBlue;
+    border-radius: 50px;
+    background: $lightBlue;
+    overflow: hidden;
+    & > span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: inherit;
+      animation: progress 1s cubic-bezier(0.23, 1, 0.32, 1);
+      animation-fill-mode: forwards;
+      width: var(--progress);
+      background: $mainRed;
+      border-radius: inherit;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 15px;
+        width: 15px;
+        z-index: 1;
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0px 0px 10px $mainBlue;
+      }
+    }
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--progress);
+  }
+}

@@ -1,0 +1,93 @@
+/* Checkbox columns */
+
+.class-activity-archive {
+  max-width: 1400px;
+  margin: 0 auto 50px auto;
+}
+
+.side-bar-activity-archive-container {
+  background-color: white;
+  padding: 22px;
+  margin: 0px 20px 0 -90px;
+  border: solid 2px $mainBlue;
+  box-shadow: 2px 2px $mainBlue;
+  display: none;
+  max-height: 200px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+
+  @include atMedium {
+    display: block;
+  }
+}
+
+.post-grid-class-activity {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+  @include atBig {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    > .loader-container {
+      grid-column: 1 / -1 !important; /* This will make it span the full width */
+    }
+  }
+}
+
+.class-activity-post-item {
+  border: 2px solid $mediumBlue;
+  border-radius: 8px;
+  padding: 18px 20px 0px 18px;
+  background-color: white;
+  box-shadow: 1px 1px $mainBlue;
+  height: 100%;
+  &:hover {
+    box-shadow: 4px 4px $mainBlue;
+  }
+  h2 {
+    margin: 10px 0 0 0;
+    font-size: 22px;
+    line-height: 28px;
+    color: $mainBlue;
+  }
+
+  .class-activity-entry-meta {
+    margin-top: 10px;
+    a {
+      margin-right: 5px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .class-activity-entry-meta {
+    font-size: 15px;
+    color: $mainGray;
+  }
+  .dashicons.dashicons-clock {
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+  .class-activity-saved {
+    float: right;
+    scale: 0.9;
+    margin: -6px -4px 6px 0;
+  }
+  .class-activity-entry-categories {
+    background: $mainRed;
+    box-shadow: 2px 2px $lightBlue;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .activity-details-item .dashicons.dashicons-clock {
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+}

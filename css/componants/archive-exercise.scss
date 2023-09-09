@@ -1,0 +1,172 @@
+.archive-main {
+  background-color: rgb(240 241 245);
+  background-image: linear-gradient(rgb(226 230 239) 1px, transparent 1px),
+    linear-gradient(to right, rgb(226 230 239) 1px, rgb(255 255 255) 1px);
+  background-size: 20px 20px;
+  margin: 0;
+  font-family: sans-serif;
+  place-items: center;
+  color: rgb(22 25 30);
+  padding: 15px 12px 110px;
+}
+
+.archive-content {
+  max-width: 950px;
+  margin: auto;
+  a {
+    text-decoration: none;
+  }
+  .login-header {
+    background-color: $mediumBlue;
+    border-radius: 8px;
+    box-shadow: 4px 4px $mainBlue;
+    padding: 10px 20px;
+    gap: 15px;
+    margin-bottom: 30px;
+    @include atBig {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      color: $mainWhite;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 10px 10px 10px 10px;
+    }
+    button {
+      background-color: $mainWhite;
+      color: $mainBlue;
+      font-size: 18px;
+      font-weight: 700;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 2px 2px $mainRed;
+
+      @include atBig {
+        min-width: 200px;
+      }
+    }
+  }
+  .wrapper-content-archive {
+    @include atBig {
+      display: flex;
+    }
+    .archive-container {
+      width: 100%;
+      margin-top: 20px;
+      @include atBig {
+        margin-top: 10px;
+      }
+    }
+
+    .side-bar-archive-container {
+      background-color: white;
+      padding: 22px;
+      margin: 20px 20px 0 0;
+      border: solid 2px $mainBlue;
+      box-shadow: 2px 2px $mainBlue;
+      display: none;
+      max-height: 220px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+
+      @include atBig {
+        display: block;
+        padding-right: 50px;
+      }
+    }
+    .exercise-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.4fr 0.4fr;
+      grid-template-rows: auto;
+      gap: 2px;
+      align-items: center;
+      border: 2px solid $mediumBlue;
+      border-radius: 8px;
+      padding: 12px 13px 10px 13px;
+      margin: 13px 0;
+      background-color: white;
+      box-shadow: 4px 4px $mainBlue;
+
+      @include atBig {
+        padding: 7px 13px 7px 13px;
+      }
+
+      &:hover {
+        box-shadow: 6px 6px $mainBlue;
+      }
+
+      &.box-highlight {
+        border: 2px solid $mainBlue;
+      }
+
+      &.box-reduced-opacity {
+        background-color: $lightBlue;
+      }
+
+      &__level {
+        background-color: $mainWhite;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $mediumBlue;
+        padding: 1px 7px;
+        margin-right: 10px;
+        grid-column: 1;
+        grid-row: 2;
+        max-width: 90px;
+        border: 2px solid $mediumBlue;
+        box-shadow: 3px 3px $mediumBlue;
+      }
+
+      &__done {
+        grid-column: 4 / 5;
+        grid-row: 2;
+        scale: 0.9;
+      }
+
+      &__title {
+        color: $mainBlue;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 18px;
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+
+      &__save {
+        grid-column: 3 / 4;
+        grid-row: 2;
+        label {
+          font-size: 1.2rem;
+        }
+      }
+
+      @include atBig {
+        grid-template-columns: 0.4fr 2fr 0.2fr 0.3fr;
+        grid-template-rows: auto;
+        &__level {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        &__title {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        &__save {
+          grid-column: 3;
+          grid-row: 1;
+        }
+
+        &__done {
+          grid-column: 4;
+          grid-row: 1;
+        }
+      }
+    }
+  }
+}
