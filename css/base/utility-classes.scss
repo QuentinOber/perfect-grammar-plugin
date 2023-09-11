@@ -1,9 +1,3 @@
-p {
-  color: $darkBlue;
-  @include atBig {
-  }
-}
-
 // for Buddyboss theme
 .site-content:not(.maintenance-content) {
   padding: 0 !important;
