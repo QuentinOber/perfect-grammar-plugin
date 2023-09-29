@@ -169,8 +169,6 @@ class Perfect_Grammar {
 
 		$plugin_admin = new Perfect_Grammar_Admin( $this->get_Perfect_Grammar(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 	}
 
@@ -185,7 +183,7 @@ class Perfect_Grammar {
 
 		$plugin_public = new Perfect_Grammar_Public( $this->get_Perfect_Grammar(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+	
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}

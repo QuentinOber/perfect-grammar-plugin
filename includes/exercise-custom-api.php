@@ -39,7 +39,9 @@ function get_single_exercise_data($request) {
     $tags = wp_get_post_terms($exercise_id, 'exercise-tag', array('fields' => 'names')); // get all the tags
     $video_link = get_post_meta($exercise_id, 'video_link', true); // get the video link
 
-    $is_saved = false; // Assume not saved
+    $saved_id = null;
+    $is_done = false;
+    $done_id = null;
 
     if ($current_user_id > 0) {
      // Check if this exercise is saved by the current user

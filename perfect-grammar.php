@@ -19,7 +19,10 @@ if ( ! defined( 'WPINC' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
+ * 
  */
+
+
 define( 'PERFECT_GRAMMAR_VERSION', '1.0.0' );
 
 /**
@@ -94,6 +97,13 @@ function enqueue_perfect_grammar_custom_scripts() {
     // Get the plugin data to fetch the version number
     $plugin_data = get_file_data(__FILE__, array('Version' => 'Version'), false);
     $plugin_version = $plugin_data['Version'];
+
+		global $wp;
+    $current_url = home_url(add_query_arg(array(), $wp->request));
+
+		if (strpos($current_url, 'checklist') === false && strpos($current_url, 'class-activity') === false) {
+			return;
+	}
 
 	wp_enqueue_script('perfect-grammar-main-scripts', plugin_dir_url(__FILE__) . 'build/index.js', array(), $plugin_version, true);
 	wp_enqueue_style('perfect-grammar-main-styles', plugin_dir_url(__FILE__) . 'build/index.css', array(), $plugin_version);
