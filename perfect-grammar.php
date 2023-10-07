@@ -2,7 +2,7 @@
 /*
 Plugin Name: Perfect Grammar Plugin   
 Description: A plugin to better teach and learn language grammar
-Version: 1.0.2
+Version: 1.0.3
 Author: Quentin Ober
 Author URI: https://www.linkedin.com/in/quentinober/
 Text Domain: perfectgrammar
