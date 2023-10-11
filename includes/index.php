@@ -1,3 +1,3 @@
-<?php // Le silence, c'est de l'or ?
+<?php // Le silence, c'est de l'or ? ?>
 
 

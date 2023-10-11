@@ -410,4 +410,3 @@ function add_saved_exercise_caps() {
 }
 
 add_action( 'admin_init', 'add_saved_exercise_caps');
-

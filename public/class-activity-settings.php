@@ -364,13 +364,4 @@ function add_saved_activity_caps() {
 }
 
 add_action( 'admin_init', 'add_saved_activity_caps');
-
-
 ?>
-
-
-
-
-
-
-	

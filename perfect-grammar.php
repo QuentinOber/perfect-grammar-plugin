@@ -7,9 +7,7 @@ Author: Quentin Ober
 Author URI: https://www.linkedin.com/in/quentinober/
 Text Domain: perfectgrammar
 Domain Path: /languages
-
 */
-
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -71,11 +69,6 @@ function run_perfect_grammar() {
 }
 run_perfect_grammar(); 
 
-
-
-
-
-
 /**
  * Begins execution of the plugin.
  *
@@ -90,8 +83,6 @@ run_perfect_grammar();
  /**
  * TO ORGANIZE LOGIC LATER ON
  **/
-
-
 
 function enqueue_perfect_grammar_custom_scripts() {
     // Get the plugin data to fetch the version number
@@ -119,5 +110,4 @@ function enqueue_perfect_grammar_custom_scripts() {
 	wp_localize_script('perfect-grammar-main-scripts', 'user_status', array(
 		'logged_in' => is_user_logged_in()));
 }
-add_action('wp_enqueue_scripts', 'enqueue_perfect_grammar_custom_scripts');
-
+add_action('wp_enqueue_scripts', 'enqueue_perfect_grammar_custom_scripts'); 
