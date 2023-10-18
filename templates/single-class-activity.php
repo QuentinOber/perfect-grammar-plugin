@@ -18,7 +18,7 @@ $titleRaw = get_the_title();
 
 <main id="main" class="single-activity-container" role="main">
     <div class="top-navbar">
-        <a href="<?php echo esc_url($archive_link);?>"><button class="go-back nav-button"><< 🏃‍♂️🏃🏃‍♂️</button></a>
+        <a href="<?php  echo esc_url($archive_link);?>"><button class="go-back nav-button"><< 🏃‍♂️🏃🏃‍♂️</button></a>
         <a href="#"><button id="random-activity-button" class="random-button nav-button">Random 🔀</button></a>
 
     </div>
@@ -47,11 +47,12 @@ $titleRaw = get_the_title();
         </div>
 
     </div>   
-
-
+    <?php  
+    if (comments_open() || get_comments_number()) {
+        comments_template();
+    }?>
 </main>
                
-
 <div class="entry-content">
 
 

@@ -42,6 +42,10 @@ $titleRaw = get_the_title();
         <!-- FIRST PART EXERCISE CONTENT w/o the exercise -->         
     </div> 
     </div>   
+    <?php  
+    if (comments_open() || get_comments_number()) {
+        comments_template();
+    }?>
 </main>
 
 
